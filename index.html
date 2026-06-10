@@ -4,231 +4,626 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Lee Youngbeom Portfolio</title>
+  <title>Lee Youngbeom | Film & Data Portfolio</title>
+
   <style>
     * {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
-      font-family: Arial, sans-serif;
+      scroll-behavior: smooth;
     }
 
-```
-body {
-  background: #0f172a;
-  color: #f8fafc;
-  line-height: 1.6;
-}
+    body {
+      font-family: "Arial", "Helvetica", sans-serif;
+      background: #f8fafc;
+      color: #111827;
+      line-height: 1.7;
+    }
 
-header {
-  min-height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  padding: 40px 20px;
-  background: linear-gradient(135deg, #0f172a, #1e293b, #334155);
-}
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
 
-header h1 {
-  font-size: 3rem;
-  margin-bottom: 15px;
-}
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: rgba(255, 255, 255, 0.92);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid #e5e7eb;
+      padding: 16px 8%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
 
-header p {
-  font-size: 1.2rem;
-  color: #cbd5e1;
-  max-width: 700px;
-  margin: 0 auto 25px;
-}
+    .logo {
+      font-weight: 800;
+      font-size: 1.1rem;
+      color: #0f172a;
+    }
 
-.btn {
-  display: inline-block;
-  padding: 12px 24px;
-  background: #38bdf8;
-  color: #0f172a;
-  text-decoration: none;
-  border-radius: 30px;
-  font-weight: bold;
-  transition: 0.3s;
-}
+    .nav-links a {
+      margin-left: 24px;
+      font-weight: 700;
+      color: #374151;
+      transition: 0.25s;
+    }
 
-.btn:hover {
-  background: #7dd3fc;
-  transform: translateY(-3px);
-}
+    .nav-links a:hover {
+      color: #2563eb;
+    }
 
-nav {
-  position: sticky;
-  top: 0;
-  background: rgba(15, 23, 42, 0.95);
-  padding: 15px;
-  text-align: center;
-  z-index: 100;
-  border-bottom: 1px solid #334155;
-}
+    header {
+      min-height: 92vh;
+      display: flex;
+      align-items: center;
+      padding: 80px 8%;
+      background:
+        linear-gradient(rgba(15, 23, 42, 0.68), rgba(15, 23, 42, 0.78)),
+        linear-gradient(135deg, #1e3a8a, #0f172a 45%, #111827);
+      color: white;
+    }
 
-nav a {
-  color: #f8fafc;
-  text-decoration: none;
-  margin: 0 15px;
-  font-weight: bold;
-}
+    .hero {
+      max-width: 900px;
+    }
 
-nav a:hover {
-  color: #38bdf8;
-}
+    .eyebrow {
+      display: inline-block;
+      background: rgba(255, 255, 255, 0.16);
+      border: 1px solid rgba(255, 255, 255, 0.3);
+      padding: 8px 14px;
+      border-radius: 999px;
+      margin-bottom: 20px;
+      font-size: 0.9rem;
+      color: #dbeafe;
+    }
 
-section {
-  padding: 70px 20px;
-  max-width: 1000px;
-  margin: auto;
-}
+    header h1 {
+      font-size: clamp(2.8rem, 7vw, 5.5rem);
+      line-height: 1.05;
+      margin-bottom: 22px;
+      letter-spacing: -2px;
+    }
 
-section h2 {
-  font-size: 2rem;
-  margin-bottom: 25px;
-  color: #38bdf8;
-}
+    header p {
+      font-size: 1.22rem;
+      max-width: 720px;
+      color: #e5e7eb;
+      margin-bottom: 34px;
+    }
 
-.card {
-  background: #1e293b;
-  padding: 25px;
-  border-radius: 18px;
-  margin-bottom: 20px;
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
-}
+    .hero-buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+    }
 
-.card h3 {
-  margin-bottom: 10px;
-  color: #facc15;
-}
+    .btn-primary,
+    .btn-secondary {
+      display: inline-block;
+      padding: 14px 24px;
+      border-radius: 999px;
+      font-weight: 800;
+      transition: 0.25s;
+    }
 
-.grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 20px;
-}
+    .btn-primary {
+      background: #facc15;
+      color: #111827;
+    }
 
-.tag {
-  display: inline-block;
-  background: #334155;
-  padding: 8px 14px;
-  border-radius: 20px;
-  margin: 5px;
-  color: #e2e8f0;
-}
+    .btn-primary:hover {
+      background: #fde047;
+      transform: translateY(-3px);
+    }
 
-footer {
-  text-align: center;
-  padding: 30px;
-  background: #020617;
-  color: #94a3b8;
-}
+    .btn-secondary {
+      border: 1px solid rgba(255, 255, 255, 0.55);
+      color: white;
+    }
 
-@media (max-width: 600px) {
-  header h1 {
-    font-size: 2.2rem;
-  }
+    .btn-secondary:hover {
+      background: white;
+      color: #111827;
+      transform: translateY(-3px);
+    }
 
-  nav a {
-    display: inline-block;
-    margin: 8px;
-  }
-}
-```
+    section {
+      padding: 90px 8%;
+      max-width: 1200px;
+      margin: auto;
+    }
 
+    .section-title {
+      margin-bottom: 36px;
+    }
+
+    .section-title span {
+      color: #2563eb;
+      font-weight: 800;
+      font-size: 0.95rem;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+    }
+
+    .section-title h2 {
+      font-size: clamp(2rem, 4vw, 3rem);
+      color: #0f172a;
+      margin-top: 8px;
+      line-height: 1.15;
+    }
+
+    .section-title p {
+      margin-top: 12px;
+      max-width: 760px;
+      color: #4b5563;
+      font-size: 1.05rem;
+    }
+
+    .grid-2 {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 26px;
+    }
+
+    .grid-3 {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+
+    .card {
+      background: #ffffff;
+      border: 1px solid #e5e7eb;
+      border-radius: 24px;
+      padding: 30px;
+      box-shadow: 0 20px 45px rgba(15, 23, 42, 0.08);
+      transition: 0.25s;
+    }
+
+    .card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 26px 55px rgba(15, 23, 42, 0.13);
+    }
+
+    .card h3 {
+      font-size: 1.35rem;
+      color: #0f172a;
+      margin-bottom: 12px;
+    }
+
+    .card p {
+      color: #4b5563;
+      margin-bottom: 12px;
+    }
+
+    .highlight-card {
+      background: linear-gradient(135deg, #eff6ff, #ffffff);
+      border: 1px solid #bfdbfe;
+    }
+
+    .project-card {
+      position: relative;
+      overflow: hidden;
+    }
+
+    .project-tag {
+      display: inline-block;
+      background: #dbeafe;
+      color: #1e40af;
+      padding: 7px 12px;
+      border-radius: 999px;
+      font-size: 0.85rem;
+      font-weight: 800;
+      margin-bottom: 14px;
+    }
+
+    .project-links {
+      margin-top: 20px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .small-btn {
+      display: inline-block;
+      padding: 10px 16px;
+      border-radius: 999px;
+      background: #111827;
+      color: white;
+      font-weight: 800;
+      font-size: 0.92rem;
+      transition: 0.25s;
+    }
+
+    .small-btn:hover {
+      background: #2563eb;
+      transform: translateY(-2px);
+    }
+
+    .soft-btn {
+      background: #e5e7eb;
+      color: #111827;
+    }
+
+    .soft-btn:hover {
+      background: #dbeafe;
+      color: #1e40af;
+    }
+
+    .skills-wrap {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .skill {
+      background: #ffffff;
+      border: 1px solid #d1d5db;
+      color: #111827;
+      padding: 11px 16px;
+      border-radius: 999px;
+      font-weight: 800;
+      box-shadow: 0 8px 18px rgba(15, 23, 42, 0.06);
+    }
+
+    .timeline {
+      border-left: 4px solid #2563eb;
+      padding-left: 24px;
+    }
+
+    .timeline-item {
+      margin-bottom: 26px;
+      background: #ffffff;
+      border: 1px solid #e5e7eb;
+      padding: 22px;
+      border-radius: 18px;
+      box-shadow: 0 12px 30px rgba(15, 23, 42, 0.06);
+    }
+
+    .timeline-item h3 {
+      color: #0f172a;
+      margin-bottom: 6px;
+    }
+
+    .timeline-item p {
+      color: #4b5563;
+    }
+
+    .dark-section {
+      max-width: none;
+      background: #0f172a;
+      color: white;
+      padding: 90px 8%;
+    }
+
+    .dark-inner {
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .dark-section h2 {
+      color: white;
+    }
+
+    .dark-section p {
+      color: #cbd5e1;
+    }
+
+    .contact-box {
+      background: linear-gradient(135deg, #1d4ed8, #0f172a);
+      color: white;
+      border-radius: 28px;
+      padding: 42px;
+      display: grid;
+      grid-template-columns: 1.4fr 1fr;
+      gap: 30px;
+      align-items: center;
+      box-shadow: 0 30px 70px rgba(15, 23, 42, 0.2);
+    }
+
+    .contact-box h2 {
+      font-size: 2.4rem;
+      margin-bottom: 14px;
+    }
+
+    .contact-box p {
+      color: #e5e7eb;
+      margin-bottom: 10px;
+    }
+
+    .contact-info {
+      background: rgba(255, 255, 255, 0.12);
+      border: 1px solid rgba(255, 255, 255, 0.22);
+      padding: 24px;
+      border-radius: 20px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 36px 8%;
+      background: #020617;
+      color: #94a3b8;
+    }
+
+    @media (max-width: 860px) {
+      nav {
+        flex-direction: column;
+        gap: 12px;
+      }
+
+      .nav-links a {
+        margin: 0 8px;
+        font-size: 0.95rem;
+      }
+
+      header {
+        min-height: auto;
+        padding: 90px 6%;
+      }
+
+      section {
+        padding: 70px 6%;
+      }
+
+      .grid-2,
+      .grid-3,
+      .contact-box {
+        grid-template-columns: 1fr;
+      }
+    }
   </style>
+
 </head>
 
 <body>
   <nav>
-    <a href="#about">About</a>
-    <a href="#projects">Projects</a>
-    <a href="#skills">Skills</a>
-    <a href="#contact">Contact</a>
+    <a class="logo" href="#">🎬 Youngbeom Lee</a>
+    <div class="nav-links">
+      <a href="#about">About</a>
+      <a href="#projects">Projects</a>
+      <a href="#process">Process</a>
+      <a href="#skills">Skills</a>
+      <a href="#contact">Contact</a>
+    </div>
   </nav>
 
   <header>
-    <div>
-      <h1>🎬 Lee Youngbeom</h1>
+    <div class="hero">
+      <span class="eyebrow">Film Production · Data Visualization · AI-assisted Coding</span>
+      <h1>Connecting cinema, data, and creative technology.</h1>
       <p>
-        Film student at Sungkyunkwan University interested in storytelling,
-        visual production, data, and creative technology.
+        I am Lee Youngbeom, a Film major at Sungkyunkwan University.
+        This portfolio presents my work from Arts and Big Data, where I explore
+        how data dashboards, AI tools, and web technologies can support film production
+        and storytelling.
       </p>
-      <a class="btn" href="#projects">View My Projects</a>
-    </div>
+
+```
+  <div class="hero-buttons">
+    <a class="btn-primary" href="#projects">View Projects</a>
+    <a class="btn-secondary" href="#contact">Contact Me</a>
+  </div>
+</div>
+```
+
   </header>
 
   <section id="about">
-    <h2>About Me</h2>
-    <div class="card">
+    <div class="section-title">
+      <span>About Me</span>
+      <h2>A film student exploring data-driven creativity.</h2>
       <p>
-        Hello, I am Lee Youngbeom, a Film major at Sungkyunkwan University.
-        I am interested in film production, screenwriting, visual storytelling,
-        and the use of data and AI tools in creative work.
-      </p>
-      <br />
-      <p>
-        This portfolio introduces my projects from the Arts and Big Data course,
-        including a Streamlit dashboard and web-based project experiments.
+        My main interest is film production and storytelling, but I also want to understand
+        how data and AI can help creators make better decisions, organize projects, and present
+        ideas more effectively.
       </p>
     </div>
+
+```
+<div class="grid-2">
+  <div class="card highlight-card">
+    <h3>🎥 Film Background</h3>
+    <p>
+      As a film major, I am interested in directing, screenwriting, visual style,
+      production planning, and how stories are shaped through cinematic choices.
+    </p>
+    <p>
+      I approach projects not only as technical exercises, but also as tools for
+      creative thinking and communication.
+    </p>
+  </div>
+
+  <div class="card highlight-card">
+    <h3>📊 Data Perspective</h3>
+    <p>
+      Through this course, I learned that data can also be useful in arts and culture.
+      Film data such as budget, revenue, genre, and ROI can reveal patterns that are
+      difficult to see through intuition alone.
+    </p>
+    <p>
+      My goal is to connect artistic interests with simple but meaningful data analysis.
+    </p>
+  </div>
+</div>
+```
+
   </section>
 
   <section id="projects">
-    <h2>Projects</h2>
+    <div class="section-title">
+      <span>Projects</span>
+      <h2>Selected course projects</h2>
+      <p>
+        These projects show my process of using AI-assisted coding, Streamlit, GitHub,
+        and GitHub Pages to build web-based creative tools.
+      </p>
+    </div>
 
 ```
-<div class="card">
-  <h3>🎞️ Film Production Dashboard</h3>
-  <p>
-    A Streamlit web app that analyzes movie production data such as title,
-    director, year, genre, budget, revenue, profit, and ROI.
-  </p>
-  <p>
-    The dashboard includes interactive charts, a decade filter, genre distribution,
-    and a sidebar for adding new movies.
-  </p>
-</div>
+<div class="grid-2">
+  <div class="card project-card">
+    <span class="project-tag">Streamlit Dashboard</span>
+    <h3>🎞️ Film Production Data Hub Dashboard</h3>
+    <p>
+      A Streamlit web app that analyzes movie production data such as title, director,
+      year, genre, budget, revenue, profit, and ROI.
+    </p>
+    <p>
+      The dashboard includes a budget vs revenue bar chart, genre distribution pie chart,
+      decade filter, ROI calculation, key metric cards, and a sidebar for adding new movies.
+    </p>
+    <p>
+      This project connects my film major with data visualization by showing how film
+      performance can be explored through interactive charts.
+    </p>
 
-<div class="card">
-  <h3>🌐 GitHub Portfolio Website</h3>
-  <p>
-    A personal portfolio website built with HTML and CSS and published through
-    GitHub Pages.
-  </p>
+    <div class="project-links">
+      <a class="small-btn" href="https://github.com/YOUR-GITHUB-ID/film-production-dashboard" target="_blank">
+        GitHub Repo
+      </a>
+      <a class="small-btn soft-btn" href="#process">
+        View Process
+      </a>
+    </div>
+  </div>
+
+  <div class="card project-card">
+    <span class="project-tag">GitHub Pages</span>
+    <h3>🌐 Personal Portfolio Website</h3>
+    <p>
+      A responsive portfolio website built with HTML and CSS and published using GitHub Pages.
+    </p>
+    <p>
+      The site introduces my background, projects, skills, and contact information.
+      It also works as a public portfolio page for future creative and technical projects.
+    </p>
+    <p>
+      Through this project, I learned how a GitHub repository can become a live website.
+    </p>
+
+    <div class="project-links">
+      <a class="small-btn" href="#contact">
+        Contact
+      </a>
+      <a class="small-btn soft-btn" href="#skills">
+        Skills
+      </a>
+    </div>
+  </div>
+</div>
+```
+
+  </section>
+
+  <section id="process" class="dark-section">
+    <div class="dark-inner">
+      <div class="section-title">
+        <span>Process</span>
+        <h2>How I built the project</h2>
+        <p>
+          The project was developed step by step, starting from an AI-generated prompt and
+          gradually becoming a working web dashboard and portfolio.
+        </p>
+      </div>
+
+```
+  <div class="timeline">
+    <div class="timeline-item">
+      <h3>Week 09 · Streamlit App</h3>
+      <p>
+        I created a Film Production Dashboard using Streamlit. The app includes sample movie data,
+        ROI calculation, charts, filters, and interactive input fields.
+      </p>
+    </div>
+
+    <div class="timeline-item">
+      <h3>Week 10 · GitHub Repository</h3>
+      <p>
+        I uploaded the Streamlit project to GitHub with app.py, requirements.txt, and README.md.
+        This helped me organize the project as a shareable code portfolio.
+      </p>
+    </div>
+
+    <div class="timeline-item">
+      <h3>Week 11 · GitHub Pages Portfolio</h3>
+      <p>
+        I created this personal portfolio website using GitHub Pages. The website presents my
+        course projects, background, skills, and contact information.
+      </p>
+    </div>
+
+    <div class="timeline-item">
+      <h3>Final Project Plan · PRD</h3>
+      <p>
+        My final project plan is to expand the Film Production Dashboard into a more complete
+        data hub with richer movie data, improved visual design, and additional analysis features.
+      </p>
+    </div>
+  </div>
 </div>
 ```
 
   </section>
 
   <section id="skills">
-    <h2>Skills</h2>
-    <div class="card">
-      <span class="tag">Film Production</span>
-      <span class="tag">Screenwriting</span>
-      <span class="tag">Storytelling</span>
-      <span class="tag">Python</span>
-      <span class="tag">Streamlit</span>
-      <span class="tag">Pandas</span>
-      <span class="tag">Plotly</span>
-      <span class="tag">GitHub</span>
-      <span class="tag">AI-assisted Coding</span>
+    <div class="section-title">
+      <span>Skills</span>
+      <h2>Tools and interests</h2>
+      <p>
+        This portfolio combines my film-related interests with basic programming and web publishing tools.
+      </p>
     </div>
+
+```
+<div class="skills-wrap">
+  <span class="skill">Film Production</span>
+  <span class="skill">Screenwriting</span>
+  <span class="skill">Storytelling</span>
+  <span class="skill">Production Planning</span>
+  <span class="skill">Python</span>
+  <span class="skill">Streamlit</span>
+  <span class="skill">Pandas</span>
+  <span class="skill">Plotly</span>
+  <span class="skill">GitHub</span>
+  <span class="skill">GitHub Pages</span>
+  <span class="skill">HTML</span>
+  <span class="skill">CSS</span>
+  <span class="skill">AI-assisted Coding</span>
+  <span class="skill">Data Visualization</span>
+</div>
+```
+
   </section>
 
   <section id="contact">
-    <h2>Contact</h2>
-    <div class="card">
-      <p>Email: dudqjarnfu12@g.skku.edu</p>
-      <p>University: Sungkyunkwan University</p>
-      <p>Major: Film</p>
-    </div>
+    <div class="contact-box">
+      <div>
+        <h2>Let’s connect.</h2>
+        <p>
+          I am interested in projects that connect film, storytelling, data, and technology.
+          This portfolio will continue to grow as I develop more creative works and web-based tools.
+        </p>
+      </div>
+
+```
+  <div class="contact-info">
+    <p><strong>Name:</strong> Lee Youngbeom / 이영범</p>
+    <p><strong>Major:</strong> Film</p>
+    <p><strong>University:</strong> Sungkyunkwan University</p>
+    <p><strong>Email:</strong> dudqjarnfu12@g.skku.edu</p>
+  </div>
+</div>
+```
+
   </section>
 
   <footer>
-    <p>© 2026 Lee Youngbeom. Built with GitHub Pages.</p>
+    <p>© 2026 Lee Youngbeom. Built with HTML, CSS, and GitHub Pages.</p>
   </footer>
 </body>
 </html>
