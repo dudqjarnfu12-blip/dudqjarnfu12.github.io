@@ -1,4 +1,4 @@
-# dudqjarnfu12.github.io
+# dudqjarnfu12-blip.github.io
 
 # 🎬 PRD: Film Production Data Hub Dashboard
 
