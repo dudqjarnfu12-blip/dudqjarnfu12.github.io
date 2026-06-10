@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lee Youngbeom Portfolio</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+```
+body {
+  background: #0f172a;
+  color: #f8fafc;
+  line-height: 1.6;
+}
+
+header {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 40px 20px;
+  background: linear-gradient(135deg, #0f172a, #1e293b, #334155);
+}
+
+header h1 {
+  font-size: 3rem;
+  margin-bottom: 15px;
+}
+
+header p {
+  font-size: 1.2rem;
+  color: #cbd5e1;
+  max-width: 700px;
+  margin: 0 auto 25px;
+}
+
+.btn {
+  display: inline-block;
+  padding: 12px 24px;
+  background: #38bdf8;
+  color: #0f172a;
+  text-decoration: none;
+  border-radius: 30px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background: #7dd3fc;
+  transform: translateY(-3px);
+}
+
+nav {
+  position: sticky;
+  top: 0;
+  background: rgba(15, 23, 42, 0.95);
+  padding: 15px;
+  text-align: center;
+  z-index: 100;
+  border-bottom: 1px solid #334155;
+}
+
+nav a {
+  color: #f8fafc;
+  text-decoration: none;
+  margin: 0 15px;
+  font-weight: bold;
+}
+
+nav a:hover {
+  color: #38bdf8;
+}
+
+section {
+  padding: 70px 20px;
+  max-width: 1000px;
+  margin: auto;
+}
+
+section h2 {
+  font-size: 2rem;
+  margin-bottom: 25px;
+  color: #38bdf8;
+}
+
+.card {
+  background: #1e293b;
+  padding: 25px;
+  border-radius: 18px;
+  margin-bottom: 20px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
+}
+
+.card h3 {
+  margin-bottom: 10px;
+  color: #facc15;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+}
+
+.tag {
+  display: inline-block;
+  background: #334155;
+  padding: 8px 14px;
+  border-radius: 20px;
+  margin: 5px;
+  color: #e2e8f0;
+}
+
+footer {
+  text-align: center;
+  padding: 30px;
+  background: #020617;
+  color: #94a3b8;
+}
+
+@media (max-width: 600px) {
+  header h1 {
+    font-size: 2.2rem;
+  }
+
+  nav a {
+    display: inline-block;
+    margin: 8px;
+  }
+}
+```
+
+  </style>
+</head>
+
+<body>
+  <nav>
+    <a href="#about">About</a>
+    <a href="#projects">Projects</a>
+    <a href="#skills">Skills</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <header>
+    <div>
+      <h1>🎬 Lee Youngbeom</h1>
+      <p>
+        Film student at Sungkyunkwan University interested in storytelling,
+        visual production, data, and creative technology.
+      </p>
+      <a class="btn" href="#projects">View My Projects</a>
+    </div>
+  </header>
+
+  <section id="about">
+    <h2>About Me</h2>
+    <div class="card">
+      <p>
+        Hello, I am Lee Youngbeom, a Film major at Sungkyunkwan University.
+        I am interested in film production, screenwriting, visual storytelling,
+        and the use of data and AI tools in creative work.
+      </p>
+      <br />
+      <p>
+        This portfolio introduces my projects from the Arts and Big Data course,
+        including a Streamlit dashboard and web-based project experiments.
+      </p>
+    </div>
+  </section>
+
+  <section id="projects">
+    <h2>Projects</h2>
+
+```
+<div class="card">
+  <h3>🎞️ Film Production Dashboard</h3>
+  <p>
+    A Streamlit web app that analyzes movie production data such as title,
+    director, year, genre, budget, revenue, profit, and ROI.
+  </p>
+  <p>
+    The dashboard includes interactive charts, a decade filter, genre distribution,
+    and a sidebar for adding new movies.
+  </p>
+</div>
+
+<div class="card">
+  <h3>🌐 GitHub Portfolio Website</h3>
+  <p>
+    A personal portfolio website built with HTML and CSS and published through
+    GitHub Pages.
+  </p>
+</div>
+```
+
+  </section>
+
+  <section id="skills">
+    <h2>Skills</h2>
+    <div class="card">
+      <span class="tag">Film Production</span>
+      <span class="tag">Screenwriting</span>
+      <span class="tag">Storytelling</span>
+      <span class="tag">Python</span>
+      <span class="tag">Streamlit</span>
+      <span class="tag">Pandas</span>
+      <span class="tag">Plotly</span>
+      <span class="tag">GitHub</span>
+      <span class="tag">AI-assisted Coding</span>
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2>Contact</h2>
+    <div class="card">
+      <p>Email: dudqjarnfu12@g.skku.edu</p>
+      <p>University: Sungkyunkwan University</p>
+      <p>Major: Film</p>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2026 Lee Youngbeom. Built with GitHub Pages.</p>
+  </footer>
+</body>
+</html>
