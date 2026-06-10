@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Lee Youngbeom | Film & Data Portfolio</title>
+  <title>Lee Youngbeom | Film Production Dashboard</title>
 
   <style>
     * {
@@ -15,7 +15,7 @@
     }
 
     body {
-      font-family: "Arial", "Helvetica", sans-serif;
+      font-family: Arial, Helvetica, sans-serif;
       background: #f8fafc;
       color: #111827;
       line-height: 1.7;
@@ -30,8 +30,7 @@
       position: sticky;
       top: 0;
       z-index: 1000;
-      background: rgba(255, 255, 255, 0.92);
-      backdrop-filter: blur(12px);
+      background: rgba(255, 255, 255, 0.95);
       border-bottom: 1px solid #e5e7eb;
       padding: 16px 8%;
       display: flex;
@@ -46,10 +45,9 @@
     }
 
     .nav-links a {
-      margin-left: 24px;
+      margin-left: 22px;
       font-weight: 700;
       color: #374151;
-      transition: 0.25s;
     }
 
     .nav-links a:hover {
@@ -57,13 +55,13 @@
     }
 
     header {
-      min-height: 92vh;
+      min-height: 90vh;
       display: flex;
       align-items: center;
       padding: 80px 8%;
       background:
-        linear-gradient(rgba(15, 23, 42, 0.68), rgba(15, 23, 42, 0.78)),
-        linear-gradient(135deg, #1e3a8a, #0f172a 45%, #111827);
+        linear-gradient(rgba(15, 23, 42, 0.72), rgba(15, 23, 42, 0.82)),
+        linear-gradient(135deg, #1e3a8a, #0f172a, #111827);
       color: white;
     }
 
@@ -80,18 +78,19 @@
       margin-bottom: 20px;
       font-size: 0.9rem;
       color: #dbeafe;
+      font-weight: 700;
     }
 
     header h1 {
-      font-size: clamp(2.8rem, 7vw, 5.5rem);
-      line-height: 1.05;
+      font-size: clamp(2.7rem, 6vw, 5rem);
+      line-height: 1.08;
       margin-bottom: 22px;
-      letter-spacing: -2px;
+      letter-spacing: -1.5px;
     }
 
     header p {
-      font-size: 1.22rem;
-      max-width: 720px;
+      font-size: 1.2rem;
+      max-width: 760px;
       color: #e5e7eb;
       margin-bottom: 34px;
     }
@@ -133,13 +132,13 @@
     }
 
     section {
-      padding: 90px 8%;
+      padding: 85px 8%;
       max-width: 1200px;
       margin: auto;
     }
 
     .section-title {
-      margin-bottom: 36px;
+      margin-bottom: 34px;
     }
 
     .section-title span {
@@ -159,7 +158,7 @@
 
     .section-title p {
       margin-top: 12px;
-      max-width: 760px;
+      max-width: 780px;
       color: #4b5563;
       font-size: 1.05rem;
     }
@@ -167,13 +166,13 @@
     .grid-2 {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
-      gap: 26px;
+      gap: 24px;
     }
 
     .grid-3 {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
-      gap: 24px;
+      gap: 22px;
     }
 
     .card {
@@ -181,13 +180,13 @@
       border: 1px solid #e5e7eb;
       border-radius: 24px;
       padding: 30px;
-      box-shadow: 0 20px 45px rgba(15, 23, 42, 0.08);
+      box-shadow: 0 18px 42px rgba(15, 23, 42, 0.08);
       transition: 0.25s;
     }
 
     .card:hover {
-      transform: translateY(-6px);
-      box-shadow: 0 26px 55px rgba(15, 23, 42, 0.13);
+      transform: translateY(-5px);
+      box-shadow: 0 24px 55px rgba(15, 23, 42, 0.13);
     }
 
     .card h3 {
@@ -201,29 +200,92 @@
       margin-bottom: 12px;
     }
 
-    .highlight-card {
+    .blue-card {
       background: linear-gradient(135deg, #eff6ff, #ffffff);
       border: 1px solid #bfdbfe;
     }
 
-    .project-card {
-      position: relative;
-      overflow: hidden;
+    .yellow-card {
+      background: linear-gradient(135deg, #fefce8, #ffffff);
+      border: 1px solid #fde68a;
     }
 
-    .project-tag {
-      display: inline-block;
+    .dark-section {
+      max-width: none;
+      background: #0f172a;
+      color: white;
+      padding: 85px 8%;
+    }
+
+    .dark-inner {
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .dark-section h2,
+    .dark-section h3 {
+      color: white;
+    }
+
+    .dark-section p {
+      color: #cbd5e1;
+    }
+
+    .feature-list {
+      list-style: none;
+      margin-top: 10px;
+    }
+
+    .feature-list li {
+      background: #f1f5f9;
+      margin-bottom: 10px;
+      padding: 12px 14px;
+      border-radius: 14px;
+      color: #1f2937;
+      font-weight: 600;
+    }
+
+    .data-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 10px;
+      overflow: hidden;
+      border-radius: 16px;
+      font-size: 0.96rem;
+    }
+
+    .data-table th {
+      background: #1e3a8a;
+      color: white;
+      text-align: left;
+      padding: 14px;
+    }
+
+    .data-table td {
+      background: #ffffff;
+      border-bottom: 1px solid #e5e7eb;
+      padding: 14px;
+      color: #374151;
+    }
+
+    .tag-wrap {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 14px;
+    }
+
+    .tag {
       background: #dbeafe;
       color: #1e40af;
-      padding: 7px 12px;
+      padding: 9px 14px;
       border-radius: 999px;
-      font-size: 0.85rem;
       font-weight: 800;
-      margin-bottom: 14px;
+      font-size: 0.92rem;
     }
 
     .project-links {
-      margin-top: 20px;
+      margin-top: 22px;
       display: flex;
       flex-wrap: wrap;
       gap: 12px;
@@ -231,7 +293,7 @@
 
     .small-btn {
       display: inline-block;
-      padding: 10px 16px;
+      padding: 11px 17px;
       border-radius: 999px;
       background: #111827;
       color: white;
@@ -245,89 +307,20 @@
       transform: translateY(-2px);
     }
 
-    .soft-btn {
-      background: #e5e7eb;
-      color: #111827;
-    }
-
-    .soft-btn:hover {
-      background: #dbeafe;
-      color: #1e40af;
-    }
-
-    .skills-wrap {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 12px;
-    }
-
-    .skill {
-      background: #ffffff;
-      border: 1px solid #d1d5db;
-      color: #111827;
-      padding: 11px 16px;
-      border-radius: 999px;
-      font-weight: 800;
-      box-shadow: 0 8px 18px rgba(15, 23, 42, 0.06);
-    }
-
-    .timeline {
-      border-left: 4px solid #2563eb;
-      padding-left: 24px;
-    }
-
-    .timeline-item {
-      margin-bottom: 26px;
-      background: #ffffff;
-      border: 1px solid #e5e7eb;
-      padding: 22px;
-      border-radius: 18px;
-      box-shadow: 0 12px 30px rgba(15, 23, 42, 0.06);
-    }
-
-    .timeline-item h3 {
-      color: #0f172a;
-      margin-bottom: 6px;
-    }
-
-    .timeline-item p {
-      color: #4b5563;
-    }
-
-    .dark-section {
-      max-width: none;
-      background: #0f172a;
-      color: white;
-      padding: 90px 8%;
-    }
-
-    .dark-inner {
-      max-width: 1200px;
-      margin: auto;
-    }
-
-    .dark-section h2 {
-      color: white;
-    }
-
-    .dark-section p {
-      color: #cbd5e1;
-    }
-
     .contact-box {
       background: linear-gradient(135deg, #1d4ed8, #0f172a);
       color: white;
       border-radius: 28px;
       padding: 42px;
       display: grid;
-      grid-template-columns: 1.4fr 1fr;
+      grid-template-columns: 1.3fr 1fr;
       gap: 30px;
       align-items: center;
       box-shadow: 0 30px 70px rgba(15, 23, 42, 0.2);
     }
 
     .contact-box h2 {
-      font-size: 2.4rem;
+      font-size: 2.35rem;
       margin-bottom: 14px;
     }
 
@@ -382,31 +375,30 @@
 
 <body>
   <nav>
-    <a class="logo" href="#">🎬 Youngbeom Lee</a>
+    <a class="logo" href="#">🎬 Lee Youngbeom</a>
     <div class="nav-links">
       <a href="#about">About</a>
-      <a href="#projects">Projects</a>
-      <a href="#process">Process</a>
-      <a href="#skills">Skills</a>
+      <a href="#dashboard">Dashboard</a>
+      <a href="#features">Features</a>
+      <a href="#data">Data</a>
       <a href="#contact">Contact</a>
     </div>
   </nav>
 
   <header>
     <div class="hero">
-      <span class="eyebrow">Film Production · Data Visualization · AI-assisted Coding</span>
-      <h1>Connecting cinema, data, and creative technology.</h1>
+      <span class="eyebrow">Film Production Dashboard · Streamlit · Data Visualization</span>
+      <h1>Film Production Data Hub Dashboard</h1>
       <p>
-        I am Lee Youngbeom, a Film major at Sungkyunkwan University.
-        This portfolio presents my work from Arts and Big Data, where I explore
-        how data dashboards, AI tools, and web technologies can support film production
-        and storytelling.
+        This portfolio page introduces my Streamlit web app for analyzing film production data.
+        The dashboard uses movie data such as title, director, year, genre, budget, and revenue
+        to calculate profit, ROI, and visual comparisons.
       </p>
 
 ```
   <div class="hero-buttons">
-    <a class="btn-primary" href="#projects">View Projects</a>
-    <a class="btn-secondary" href="#contact">Contact Me</a>
+    <a class="btn-primary" href="#dashboard">View Project</a>
+    <a class="btn-secondary" href="#about">About Me</a>
   </div>
 </div>
 ```
@@ -416,37 +408,38 @@
   <section id="about">
     <div class="section-title">
       <span>About Me</span>
-      <h2>A film student exploring data-driven creativity.</h2>
+      <h2>A film student using data to understand movies.</h2>
       <p>
-        My main interest is film production and storytelling, but I also want to understand
-        how data and AI can help creators make better decisions, organize projects, and present
-        ideas more effectively.
+        My name is Lee Youngbeom, and I am a Film major at Sungkyunkwan University.
+        I am interested in film production, storytelling, visual style, and how AI and data tools
+        can support creative projects.
       </p>
     </div>
 
 ```
 <div class="grid-2">
-  <div class="card highlight-card">
-    <h3>🎥 Film Background</h3>
+  <div class="card blue-card">
+    <h3>🎥 My Film Background</h3>
     <p>
-      As a film major, I am interested in directing, screenwriting, visual style,
-      production planning, and how stories are shaped through cinematic choices.
+      As a film student, I usually approach movies through story, characters, directing,
+      and production design. This project helped me look at films from another perspective:
+      data.
     </p>
     <p>
-      I approach projects not only as technical exercises, but also as tools for
-      creative thinking and communication.
+      By analyzing budget, revenue, profit, and ROI, I can better understand how films perform
+      as both creative works and production projects.
     </p>
   </div>
 
-  <div class="card highlight-card">
-    <h3>📊 Data Perspective</h3>
+  <div class="card yellow-card">
+    <h3>📊 Why This Project?</h3>
     <p>
-      Through this course, I learned that data can also be useful in arts and culture.
-      Film data such as budget, revenue, genre, and ROI can reveal patterns that are
-      difficult to see through intuition alone.
+      I chose a film production dashboard because it connects directly to my major.
+      Instead of making a random data app, I wanted to create something related to the film industry.
     </p>
     <p>
-      My goal is to connect artistic interests with simple but meaningful data analysis.
+      The project shows how data visualization can help compare movies, understand genre trends,
+      and evaluate financial performance.
     </p>
   </div>
 </div>
@@ -454,115 +447,46 @@
 
   </section>
 
-  <section id="projects">
-    <div class="section-title">
-      <span>Projects</span>
-      <h2>Selected course projects</h2>
-      <p>
-        These projects show my process of using AI-assisted coding, Streamlit, GitHub,
-        and GitHub Pages to build web-based creative tools.
-      </p>
-    </div>
-
-```
-<div class="grid-2">
-  <div class="card project-card">
-    <span class="project-tag">Streamlit Dashboard</span>
-    <h3>🎞️ Film Production Data Hub Dashboard</h3>
-    <p>
-      A Streamlit web app that analyzes movie production data such as title, director,
-      year, genre, budget, revenue, profit, and ROI.
-    </p>
-    <p>
-      The dashboard includes a budget vs revenue bar chart, genre distribution pie chart,
-      decade filter, ROI calculation, key metric cards, and a sidebar for adding new movies.
-    </p>
-    <p>
-      This project connects my film major with data visualization by showing how film
-      performance can be explored through interactive charts.
-    </p>
-
-    <div class="project-links">
-      <a class="small-btn" href="https://github.com/YOUR-GITHUB-ID/film-production-dashboard" target="_blank">
-        GitHub Repo
-      </a>
-      <a class="small-btn soft-btn" href="#process">
-        View Process
-      </a>
-    </div>
-  </div>
-
-  <div class="card project-card">
-    <span class="project-tag">GitHub Pages</span>
-    <h3>🌐 Personal Portfolio Website</h3>
-    <p>
-      A responsive portfolio website built with HTML and CSS and published using GitHub Pages.
-    </p>
-    <p>
-      The site introduces my background, projects, skills, and contact information.
-      It also works as a public portfolio page for future creative and technical projects.
-    </p>
-    <p>
-      Through this project, I learned how a GitHub repository can become a live website.
-    </p>
-
-    <div class="project-links">
-      <a class="small-btn" href="#contact">
-        Contact
-      </a>
-      <a class="small-btn soft-btn" href="#skills">
-        Skills
-      </a>
-    </div>
-  </div>
-</div>
-```
-
-  </section>
-
-  <section id="process" class="dark-section">
+  <section id="dashboard" class="dark-section">
     <div class="dark-inner">
       <div class="section-title">
-        <span>Process</span>
-        <h2>How I built the project</h2>
+        <span>Project</span>
+        <h2>What is the Film Production Dashboard?</h2>
         <p>
-          The project was developed step by step, starting from an AI-generated prompt and
-          gradually becoming a working web dashboard and portfolio.
+          The Film Production Dashboard is a Streamlit web app that allows users to explore and analyze
+          movie production data through interactive tables, filters, charts, and automatic calculations.
         </p>
       </div>
 
 ```
-  <div class="timeline">
-    <div class="timeline-item">
-      <h3>Week 09 · Streamlit App</h3>
+  <div class="grid-2">
+    <div class="card">
+      <h3>🎞️ Project Description</h3>
       <p>
-        I created a Film Production Dashboard using Streamlit. The app includes sample movie data,
-        ROI calculation, charts, filters, and interactive input fields.
+        The app includes pre-loaded data from five famous movies and allows users to add new movie data.
+        Each movie includes title, director, year, genre, budget, and revenue.
+      </p>
+      <p>
+        Based on budget and revenue, the dashboard automatically calculates profit and ROI.
+        It then visualizes the results through charts and key metric cards.
       </p>
     </div>
 
-    <div class="timeline-item">
-      <h3>Week 10 · GitHub Repository</h3>
+    <div class="card">
+      <h3>🎯 Project Goal</h3>
       <p>
-        I uploaded the Streamlit project to GitHub with app.py, requirements.txt, and README.md.
-        This helped me organize the project as a shareable code portfolio.
+        The goal of this project is to create a simple but meaningful data hub for film production analysis.
       </p>
-    </div>
+      <p>
+        It demonstrates how a film-related topic can be turned into an interactive web dashboard using
+        Python, Streamlit, Pandas, Plotly, GitHub, and AI-assisted coding.
+      </p>
 
-    <div class="timeline-item">
-      <h3>Week 11 · GitHub Pages Portfolio</h3>
-      <p>
-        I created this personal portfolio website using GitHub Pages. The website presents my
-        course projects, background, skills, and contact information.
-      </p>
-    </div>
-
-    <div class="timeline-item">
-      <h3>Final Project Plan · PRD</h3>
-      <p>
-        My final project plan is to expand the Film Production Dashboard into a more complete
-        data hub with richer movie data, improved visual design, and additional analysis features.
-      </p>
+      <div class="project-links">
+        <a class="small-btn" href="https://github.com/dudqjarnfu12-blip/film-production-dashboard" target="_blank">
+          View GitHub Repository
+        </a>
+      </div>
     </div>
   </div>
 </div>
@@ -570,31 +494,134 @@
 
   </section>
 
-  <section id="skills">
+  <section id="features">
     <div class="section-title">
-      <span>Skills</span>
-      <h2>Tools and interests</h2>
+      <span>Features</span>
+      <h2>Main features of the dashboard</h2>
       <p>
-        This portfolio combines my film-related interests with basic programming and web publishing tools.
+        The dashboard is designed to be interactive and easy to understand, even for users who are not familiar with coding.
       </p>
     </div>
 
 ```
-<div class="skills-wrap">
-  <span class="skill">Film Production</span>
-  <span class="skill">Screenwriting</span>
-  <span class="skill">Storytelling</span>
-  <span class="skill">Production Planning</span>
-  <span class="skill">Python</span>
-  <span class="skill">Streamlit</span>
-  <span class="skill">Pandas</span>
-  <span class="skill">Plotly</span>
-  <span class="skill">GitHub</span>
-  <span class="skill">GitHub Pages</span>
-  <span class="skill">HTML</span>
-  <span class="skill">CSS</span>
-  <span class="skill">AI-assisted Coding</span>
-  <span class="skill">Data Visualization</span>
+<div class="grid-3">
+  <div class="card">
+    <h3>➕ Add Movies</h3>
+    <p>
+      Users can add new movie data through the sidebar, including title, director, year, genre,
+      budget, and revenue.
+    </p>
+  </div>
+
+  <div class="card">
+    <h3>💰 ROI Calculation</h3>
+    <p>
+      The app automatically calculates profit and ROI using the movie budget and revenue.
+    </p>
+  </div>
+
+  <div class="card">
+    <h3>📊 Budget vs Revenue</h3>
+    <p>
+      A bar chart compares each movie’s budget and revenue, making financial performance easier to see.
+    </p>
+  </div>
+
+  <div class="card">
+    <h3>🥧 Genre Distribution</h3>
+    <p>
+      A pie chart shows how the movies are distributed by genre.
+    </p>
+  </div>
+
+  <div class="card">
+    <h3>🎞️ Decade Filter</h3>
+    <p>
+      Users can filter movies by decade to focus on specific time periods.
+    </p>
+  </div>
+
+  <div class="card">
+    <h3>🏆 Top ROI Ranking</h3>
+    <p>
+      The dashboard ranks movies by ROI and shows which films performed best financially.
+    </p>
+  </div>
+</div>
+```
+
+  </section>
+
+  <section id="data">
+    <div class="section-title">
+      <span>Data</span>
+      <h2>Movie data used in the dashboard</h2>
+      <p>
+        The dashboard uses movie production data with six main fields. These fields are used to calculate
+        profit, ROI, and visual comparisons.
+      </p>
+    </div>
+
+```
+<div class="card">
+  <table class="data-table">
+    <tr>
+      <th>Data Field</th>
+      <th>Description</th>
+    </tr>
+    <tr>
+      <td>Title</td>
+      <td>The name of the movie</td>
+    </tr>
+    <tr>
+      <td>Director</td>
+      <td>The director of the movie</td>
+    </tr>
+    <tr>
+      <td>Year</td>
+      <td>The release year of the movie</td>
+    </tr>
+    <tr>
+      <td>Genre</td>
+      <td>The movie genre, such as Action, Sci-Fi, Thriller, or Romance</td>
+    </tr>
+    <tr>
+      <td>Budget</td>
+      <td>The estimated production cost of the movie</td>
+    </tr>
+    <tr>
+      <td>Revenue</td>
+      <td>The box office revenue of the movie</td>
+    </tr>
+  </table>
+</div>
+
+<div class="grid-2" style="margin-top: 24px;">
+  <div class="card blue-card">
+    <h3>🎬 Sample Movies</h3>
+    <ul class="feature-list">
+      <li>Titanic</li>
+      <li>Avatar</li>
+      <li>The Godfather</li>
+      <li>Parasite</li>
+      <li>The Dark Knight</li>
+    </ul>
+  </div>
+
+  <div class="card yellow-card">
+    <h3>🛠️ Tools Used</h3>
+    <div class="tag-wrap">
+      <span class="tag">Python</span>
+      <span class="tag">Streamlit</span>
+      <span class="tag">Pandas</span>
+      <span class="tag">Plotly</span>
+      <span class="tag">GitHub</span>
+      <span class="tag">GitHub Pages</span>
+      <span class="tag">HTML</span>
+      <span class="tag">CSS</span>
+      <span class="tag">AI-assisted Coding</span>
+    </div>
+  </div>
 </div>
 ```
 
@@ -603,10 +630,11 @@
   <section id="contact">
     <div class="contact-box">
       <div>
-        <h2>Let’s connect.</h2>
+        <h2>Contact</h2>
         <p>
-          I am interested in projects that connect film, storytelling, data, and technology.
-          This portfolio will continue to grow as I develop more creative works and web-based tools.
+          This portfolio was created for the Arts and Big Data course.
+          It introduces my Film Production Dashboard project and my learning process with Streamlit,
+          GitHub, and GitHub Pages.
         </p>
       </div>
 
@@ -623,7 +651,7 @@
   </section>
 
   <footer>
-    <p>© 2026 Lee Youngbeom. Built with HTML, CSS, and GitHub Pages.</p>
+    <p>© 2026 Lee Youngbeom. Film Production Dashboard Portfolio.</p>
   </footer>
 </body>
 </html>
