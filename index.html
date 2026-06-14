@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Lee Youngbeom | Film Production Dashboard</title>
+  <title>Lee Youngbeom | Film Production Data Hub</title>
 
   <style>
     * {
@@ -30,7 +30,7 @@
       position: sticky;
       top: 0;
       z-index: 1000;
-      background: rgba(255, 255, 255, 0.95);
+      background: rgba(255, 255, 255, 0.96);
       border-bottom: 1px solid #e5e7eb;
       padding: 16px 8%;
       display: flex;
@@ -60,13 +60,13 @@
       align-items: center;
       padding: 80px 8%;
       background:
-        linear-gradient(rgba(15, 23, 42, 0.72), rgba(15, 23, 42, 0.82)),
+        linear-gradient(rgba(15, 23, 42, 0.72), rgba(15, 23, 42, 0.84)),
         linear-gradient(135deg, #1e3a8a, #0f172a, #111827);
       color: white;
     }
 
     .hero {
-      max-width: 900px;
+      max-width: 930px;
     }
 
     .eyebrow {
@@ -90,7 +90,7 @@
 
     header p {
       font-size: 1.2rem;
-      max-width: 760px;
+      max-width: 780px;
       color: #e5e7eb;
       margin-bottom: 34px;
     }
@@ -158,7 +158,7 @@
 
     .section-title p {
       margin-top: 12px;
-      max-width: 780px;
+      max-width: 800px;
       color: #4b5563;
       font-size: 1.05rem;
     }
@@ -210,6 +210,11 @@
       border: 1px solid #fde68a;
     }
 
+    .green-card {
+      background: linear-gradient(135deg, #ecfdf5, #ffffff);
+      border: 1px solid #bbf7d0;
+    }
+
     .dark-section {
       max-width: none;
       background: #0f172a;
@@ -229,6 +234,14 @@
 
     .dark-section p {
       color: #cbd5e1;
+    }
+
+    .dark-section .card h3 {
+      color: #0f172a;
+    }
+
+    .dark-section .card p {
+      color: #4b5563;
     }
 
     .feature-list {
@@ -307,6 +320,32 @@
       transform: translateY(-2px);
     }
 
+    .stat-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 18px;
+      margin-top: 24px;
+    }
+
+    .stat {
+      background: white;
+      border-radius: 20px;
+      padding: 24px;
+      border: 1px solid #e5e7eb;
+      box-shadow: 0 14px 34px rgba(15, 23, 42, 0.08);
+    }
+
+    .stat h3 {
+      color: #2563eb;
+      font-size: 2rem;
+      margin-bottom: 4px;
+    }
+
+    .stat p {
+      color: #4b5563;
+      font-weight: 700;
+    }
+
     .contact-box {
       background: linear-gradient(135deg, #1d4ed8, #0f172a);
       color: white;
@@ -343,7 +382,7 @@
       color: #94a3b8;
     }
 
-    @media (max-width: 860px) {
+    @media (max-width: 900px) {
       nav {
         flex-direction: column;
         gap: 12px;
@@ -365,7 +404,8 @@
 
       .grid-2,
       .grid-3,
-      .contact-box {
+      .contact-box,
+      .stat-grid {
         grid-template-columns: 1fr;
       }
     }
@@ -387,7 +427,7 @@
 
   <header>
     <div class="hero">
-      <span class="eyebrow">Film Production Dashboard · Streamlit · Data Visualization</span>
+      <span class="eyebrow">Film Production Dashboard · Streamlit · 50 Movie Dataset</span>
       <h1>Film Production Data Hub Dashboard</h1>
       <p>
         This portfolio page introduces my Streamlit web app for analyzing film production data.
@@ -398,7 +438,9 @@
 ```
   <div class="hero-buttons">
     <a class="btn-primary" href="#dashboard">View Project</a>
-    <a class="btn-secondary" href="#about">About Me</a>
+    <a class="btn-secondary" href="https://github.com/dudqjarnfu12-blip/film-production-dashboard" target="_blank">
+      GitHub Repository
+    </a>
   </div>
 </div>
 ```
@@ -450,7 +492,7 @@
   <section id="dashboard" class="dark-section">
     <div class="dark-inner">
       <div class="section-title">
-        <span>Project</span>
+        <span>Project Overview</span>
         <h2>What is the Film Production Dashboard?</h2>
         <p>
           The Film Production Dashboard is a Streamlit web app that allows users to explore and analyze
@@ -463,12 +505,12 @@
     <div class="card">
       <h3>🎞️ Project Description</h3>
       <p>
-        The app includes pre-loaded data from five famous movies and allows users to add new movie data.
+        The app includes pre-loaded data from fifty famous movies and allows users to add new movie data.
         Each movie includes title, director, year, genre, budget, and revenue.
       </p>
       <p>
         Based on budget and revenue, the dashboard automatically calculates profit and ROI.
-        It then visualizes the results through charts and key metric cards.
+        It then visualizes the results through charts, filters, key metric cards, and quick insights.
       </p>
     </div>
 
@@ -487,6 +529,25 @@
           View GitHub Repository
         </a>
       </div>
+    </div>
+  </div>
+
+  <div class="stat-grid">
+    <div class="stat">
+      <h3>50</h3>
+      <p>Sample movies</p>
+    </div>
+    <div class="stat">
+      <h3>6+</h3>
+      <p>Data fields</p>
+    </div>
+    <div class="stat">
+      <h3>5</h3>
+      <p>Main chart modes</p>
+    </div>
+    <div class="stat">
+      <h3>AI</h3>
+      <p>Assisted coding</p>
     </div>
   </div>
 </div>
@@ -514,37 +575,60 @@
   </div>
 
   <div class="card">
-    <h3>💰 ROI Calculation</h3>
+    <h3>🔎 Search by Title</h3>
     <p>
-      The app automatically calculates profit and ROI using the movie budget and revenue.
+      Users can search for a specific movie title and quickly find it inside the dataset.
     </p>
   </div>
 
   <div class="card">
-    <h3>📊 Budget vs Revenue</h3>
+    <h3>🎭 Genre Filter</h3>
     <p>
-      A bar chart compares each movie’s budget and revenue, making financial performance easier to see.
-    </p>
-  </div>
-
-  <div class="card">
-    <h3>🥧 Genre Distribution</h3>
-    <p>
-      A pie chart shows how the movies are distributed by genre.
+      Users can select one or multiple genres such as Action, Sci-Fi, Drama, Animation, Thriller, or Comedy.
     </p>
   </div>
 
   <div class="card">
     <h3>🎞️ Decade Filter</h3>
     <p>
-      Users can filter movies by decade to focus on specific time periods.
+      Users can filter movies by decade to focus on specific time periods and compare film trends over time.
     </p>
   </div>
 
   <div class="card">
-    <h3>🏆 Top ROI Ranking</h3>
+    <h3>💰 ROI Calculation</h3>
     <p>
-      The dashboard ranks movies by ROI and shows which films performed best financially.
+      The app automatically calculates profit and ROI using each movie’s budget and revenue.
+    </p>
+  </div>
+
+  <div class="card">
+    <h3>📊 Chart Type Selection</h3>
+    <p>
+      Users can choose the main chart type, including Budget vs Revenue, Top Profit Movies,
+      Top ROI Movies, Average ROI by Genre, and Movie Count by Decade.
+    </p>
+  </div>
+
+  <div class="card">
+    <h3>↕️ Sorting Options</h3>
+    <p>
+      Users can sort movies by revenue, profit, ROI, budget, year, or title in ascending or descending order.
+    </p>
+  </div>
+
+  <div class="card">
+    <h3>🥧 Additional Charts</h3>
+    <p>
+      The dashboard includes genre distribution and movie performance category charts for extra analysis.
+    </p>
+  </div>
+
+  <div class="card">
+    <h3>📝 Quick Insight</h3>
+    <p>
+      The app automatically summarizes which movie has the highest ROI, highest revenue, and highest profit
+      among the selected movies.
     </p>
   </div>
 </div>
@@ -558,7 +642,7 @@
       <h2>Movie data used in the dashboard</h2>
       <p>
         The dashboard uses movie production data with six main fields. These fields are used to calculate
-        profit, ROI, and visual comparisons.
+        profit, ROI, rankings, filters, and visual comparisons.
       </p>
     </div>
 
@@ -583,7 +667,7 @@
     </tr>
     <tr>
       <td>Genre</td>
-      <td>The movie genre, such as Action, Sci-Fi, Thriller, or Romance</td>
+      <td>The movie genre, such as Action, Sci-Fi, Thriller, Comedy, Animation, or Drama</td>
     </tr>
     <tr>
       <td>Budget</td>
@@ -605,6 +689,16 @@
       <li>The Godfather</li>
       <li>Parasite</li>
       <li>The Dark Knight</li>
+      <li>Jaws</li>
+      <li>Star Wars</li>
+      <li>Jurassic Park</li>
+      <li>Inception</li>
+      <li>Interstellar</li>
+      <li>Avengers: Endgame</li>
+      <li>Barbie</li>
+      <li>Oppenheimer</li>
+      <li>Dune: Part Two</li>
+      <li>Inside Out 2</li>
     </ul>
   </div>
 
@@ -620,8 +714,19 @@
       <span class="tag">HTML</span>
       <span class="tag">CSS</span>
       <span class="tag">AI-assisted Coding</span>
+      <span class="tag">Data Visualization</span>
+      <span class="tag">Film Production</span>
     </div>
   </div>
+</div>
+
+<div class="card green-card" style="margin-top: 24px;">
+  <h3>📌 Note on Data</h3>
+  <p>
+    The movie budget and revenue values are approximate sample data used for educational dashboard purposes.
+    The focus of this project is not perfect financial accuracy, but learning how to build an interactive
+    data dashboard related to film production.
+  </p>
 </div>
 ```
 
@@ -651,7 +756,7 @@
   </section>
 
   <footer>
-    <p>© 2026 Lee Youngbeom. Film Production Dashboard Portfolio.</p>
+    <p>© 2026 Lee Youngbeom. Film Production Data Hub Dashboard Portfolio.</p>
   </footer>
 </body>
 </html>
